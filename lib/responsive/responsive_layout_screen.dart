@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:instagram_clone/utils/dimensions.dart';
 
 class ResponsiveLayout extends StatelessWidget {
+  //Properties
   final Widget webScreenLayout;
   final Widget mobileScreenLayout;
 
@@ -20,11 +21,9 @@ class ResponsiveLayout extends StatelessWidget {
         if (constraints.maxWidth > webScreenSize) {
           //web-screen
           return webScreenLayout;
-        } else {
-          //mobile screen
-          mobileScreenLayout;
         }
-        throw 'Something went wrong';
+        //mobile screen
+        return mobileScreenLayout;
       },
     );
   }
